@@ -58,28 +58,28 @@
 								<div class="content">
 									<h2 class="major">Accolades</h2>
 									<p>smthn.</p>
-<div class="text-slider">
-  <p class="active">First Slide - Text One</p>
-  <p>Second Slide - Text Two</p>
-  <p>Third Slide - Text Three</p>
+<div class="slideshow-container">
+  <div class="text-slide active">First Slide - Text One</div>
+  <div class="text-slide">Second Slide - Text Two</div>
+  <div class="text-slide">Third Slide - Text Three</div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const texts = document.querySelectorAll('.text-slider p');
+    const slides = document.querySelectorAll('.text-slide');
     let index = 0;
 
-    function showText() {
-      texts.forEach((text) => {
-        text.classList.remove('active');
+    function showSlide() {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
       });
 
-      texts[index].classList.add('active');
+      slides[index].classList.add('active');
 
-      index = (index + 1) % texts.length;
+      index = (index + 1) % slides.length;
     }
 
-    setInterval(showText, 3000); // Change text every 3 seconds (adjust as needed)
+    setInterval(showSlide, 3000); // Change slide every 3 seconds (adjust as needed)
   });
 </script>
 								</div>
