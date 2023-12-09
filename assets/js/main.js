@@ -141,7 +141,8 @@
 						$menu._hide();
 
 			});
-	// Slideshow script
+
+// Slideshow script
 let currentSlide = 0;
 const textSlides = document.querySelectorAll('.text-slide');
 const totalSlides = textSlides.length;
@@ -157,17 +158,8 @@ function nextTextSlide() {
     showTextSlide(currentSlide);
 }
 
-function prevTextSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showTextSlide(currentSlide);
-}
-
-// Change text slide on button click
-document.getElementById('nextSlide').addEventListener('click', nextTextSlide);
-document.getElementById('prevSlide').addEventListener('click', prevTextSlide);
-
-// Automatic slideshow
-setInterval(nextTextSlide, 5000);
+// Change text slide every 3 seconds (adjust as needed)
+setInterval(nextTextSlide, 3000);
 
 // Initial display
 showTextSlide(currentSlide);
