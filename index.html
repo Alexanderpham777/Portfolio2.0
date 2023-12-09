@@ -54,34 +54,40 @@
 						<!-- 0 -->
 						<section id="two" class="wrapper alt spotlight style2">
 							<div class="inner">
-								<a href="#" class="image"><img src="images/books.jpg" alt="" /></a>
+							<!--	<a href="#" class="image"><img src="images/books.jpg" alt="" /></a> -->
 								<div class="content">
 									<h2 class="major">Accolades</h2>
 									<p>smthn.</p>
+<!-- Slideshow container -->
 <div class="slideshow-container">
-  <div class="text-slide active">First Slide - Text One</div>
-  <div class="text-slide">Second Slide - Text Two</div>
-  <div class="text-slide">Third Slide - Text Three</div>
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+    <p class="author">- John Keats</p>
+  </div>
+
+  <div class="mySlides">
+    <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+    <p class="author">- Ernest Hemingway</p>
+  </div>
+
+  <div class="mySlides">
+    <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const slides = document.querySelectorAll('.text-slide');
-    let index = 0;
-
-    function showSlide() {
-      slides.forEach((slide) => {
-        slide.classList.remove('active');
-      });
-
-      slides[index].classList.add('active');
-
-      index = (index + 1) % slides.length;
-    }
-
-    setInterval(showSlide, 3000); // Change slide every 3 seconds (adjust as needed)
-  });
-</script>
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 								</div>
 							</div>
 						</section>
