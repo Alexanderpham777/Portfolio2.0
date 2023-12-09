@@ -50,7 +50,42 @@
 
 				<!-- Wrapper -->
 					<section id="wrapper">
+						
+						<!-- 0 -->
+						<section id="two" class="wrapper alt spotlight style2">
+							<div class="inner">
+								<a href="#" class="image"><img src="images/books.jpg" alt="" /></a>
+								<div class="content">
+									<h2 class="major">Accolades</h2>
+									<p>smthn.</p>
+<div class="text-slider">
+  <p class="active">First Slide - Text One</p>
+  <p>Second Slide - Text Two</p>
+  <p>Third Slide - Text Three</p>
+</div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const texts = document.querySelectorAll('.text-slider p');
+    let index = 0;
+
+    function showText() {
+      texts.forEach((text) => {
+        text.classList.remove('active');
+      });
+
+      texts[index].classList.add('active');
+
+      index = (index + 1) % texts.length;
+    }
+
+    setInterval(showText, 3000); // Change text every 3 seconds (adjust as needed)
+  });
+</script>
+								</div>
+							</div>
+						</section>
+						
 						<!-- One -->
 						<section id="one" class="wrapper spotlight style1">
 							<div class="inner">
