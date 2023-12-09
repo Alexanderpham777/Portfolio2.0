@@ -159,7 +159,7 @@ function nextTextSlide() {
 }
 
 // Change text slide every 3 seconds (adjust as needed)
-setInterval(nextTextSlide, 3000);
+setInterval(nextTextSlide, 5000);
 
 // Initial display
 showTextSlide(currentSlide);
