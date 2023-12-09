@@ -141,5 +141,26 @@
 						$menu._hide();
 
 			});
+	// Slideshow script
+let currentSlide = 0;
+const textSlides = document.querySelectorAll('.text-slide');
+const totalSlides = textSlides.length;
+
+function showTextSlide(index) {
+    textSlides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function nextTextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showTextSlide(currentSlide);
+}
+
+// Change text slide every 3 seconds (adjust as needed)
+setInterval(nextTextSlide, 3000);
+
+// Initial display
+showTextSlide(currentSlide);
 
 })(jQuery);
