@@ -46,30 +46,6 @@
 							<h2>Alexander Pham</h2>
 							<p> "Just because you fail at something, does not mean you can’t do it, it just means there are improvements." <br />- Alexander Pham</p>
 						</div>
-						<div class="text-slider">
-  <p class="active">First Text</p>
-  <p>Second Text</p>
-  <p>Third Text</p>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const texts = document.querySelectorAll('.text-slider p');
-    let index = 0;
-
-    function showText() {
-      texts.forEach((text) => {
-        text.classList.remove('active');
-      });
-
-      texts[index].classList.add('active');
-
-      index = (index + 1) % texts.length;
-    }
-
-    setInterval(showText, 3000); // Change text every 3 seconds (adjust as needed)
-  });
-</script>
 					</section>
 
 				<!-- Wrapper -->
