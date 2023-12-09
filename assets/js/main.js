@@ -157,10 +157,18 @@ function nextTextSlide() {
     showTextSlide(currentSlide);
 }
 
-// Change text slide every 15 seconds
-setInterval(nextTextSlide, 15000);
+function prevTextSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showTextSlide(currentSlide);
+}
+
+// Change text slide on button click
+document.getElementById('nextSlide').addEventListener('click', nextTextSlide);
+document.getElementById('prevSlide').addEventListener('click', prevTextSlide);
+
+// Automatic slideshow
+setInterval(nextTextSlide, 3000);
 
 // Initial display
 showTextSlide(currentSlide);
-
 })(jQuery);
