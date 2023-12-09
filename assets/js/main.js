@@ -167,7 +167,7 @@ document.getElementById('nextSlide').addEventListener('click', nextTextSlide);
 document.getElementById('prevSlide').addEventListener('click', prevTextSlide);
 
 // Automatic slideshow
-setInterval(nextTextSlide, 3000);
+setInterval(nextTextSlide, 5000);
 
 // Initial display
 showTextSlide(currentSlide);
